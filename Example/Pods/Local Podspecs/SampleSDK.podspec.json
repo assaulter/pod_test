@@ -1,0 +1,22 @@
+{
+  "name": "SampleSDK",
+  "version": "0.1.0",
+  "summary": "A short description of SampleSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Kazuki Kubo/SampleSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Kazuki Kubo": "kz@assaulter.org"
+  },
+  "source": {
+    "git": "https://github.com/Kazuki Kubo/SampleSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "SampleSDK/Classes/**/*"
+}

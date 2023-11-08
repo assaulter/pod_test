@@ -7,12 +7,27 @@
 //
 
 import UIKit
+import SampleSDK
 
 class ViewController: UIViewController {
+    
+    private lazy var label: UILabel = {
+        let l = UILabel()
+        l.text = "View Controller."
+        
+        return l
+    }()
+    
+    override func loadView() {
+        super.loadView()
+        
+        setupViews()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        test()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,5 +35,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    private func setupViews() {
+        label.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(label)
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+    
+    private func test() {
+        let sdk = Sample()
+        sdk.echo()
+    }
 }
 
